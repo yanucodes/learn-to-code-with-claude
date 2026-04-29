@@ -1,0 +1,9 @@
+# Local skill config — contains user paths
+.claude/skills/learn-to-code-with-claude/config.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coding problems generated during interviews
+coding/
