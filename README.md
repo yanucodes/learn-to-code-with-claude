@@ -67,10 +67,10 @@ Writes a learning-oriented note to your vault: the *why* of the concept, a minim
 ```bash
 git clone https://github.com/<you>/learn-to-code-with-claude.git
 cd learn-to-code-with-claude
-./setup.sh
+python3 setup.py
 ```
 
-The setup script copies the skill into `~/.claude/skills/` (so any Claude Code session, in any project, can invoke it) and walks you through the configuration interactively.
+The setup script copies the skill into `~/.claude/skills/` (so any Claude Code session, in any project, can invoke it) and walks you through the configuration interactively. It requires Python 3.8+ (no third-party dependencies).
 
 > Prefer to skip the script? Copy `.claude/skills/learn-to-code-with-claude/` to `~/.claude/skills/` manually. The first time you ask Claude to quiz you, it'll prompt for the same answers and write the config itself.
 
@@ -78,7 +78,7 @@ The setup script copies the skill into `~/.claude/skills/` (so any Claude Code s
 
 ## Configure
 
-`setup.sh` asks three things and writes them to `~/.claude/skills/learn-to-code-with-claude/config.json`:
+`setup.py` asks three things and writes them to `~/.claude/skills/learn-to-code-with-claude/config.json`:
 
 - **Your Obsidian vault path** — anywhere on disk, e.g. `~/Documents/Obsidian` or `~/Notes`. The script checks the path exists; if it doesn't, it offers to create the directory or have you re-enter the path. It loops until the path is valid.
 - **Languages for explanation notes** — entered one per line (press Enter on a blank line to finish). Notes will include a minimal example in each.
@@ -87,7 +87,7 @@ The setup script copies the skill into `~/.claude/skills/` (so any Claude Code s
   - `leetcode` — Claude suggests a relevant LeetCode problem (name + URL) instead. Best when you're already grinding LeetCode and want the quiz to match.
   - `none` — no coding problems. Conceptual questions only. Best for quick refreshers or when you only have 10 minutes.
 
-You can re-run `setup.sh` to reconfigure, or edit `config.json` directly. A reference is at [`config.example.json`](.claude/skills/learn-to-code-with-claude/config.example.json).
+You can re-run `setup.py` to reconfigure, or edit `config.json` directly. A reference is at [`config.example.json`](.claude/skills/learn-to-code-with-claude/config.example.json).
 
 ---
 
