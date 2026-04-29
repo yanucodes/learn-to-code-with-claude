@@ -62,6 +62,13 @@ Writes a learning-oriented note to your vault: the *why* of the concept, a minim
 
 ---
 
+## Requirements
+
+- **[Claude Code](https://claude.com/claude-code)** — the CLI that loads and runs the skill.
+- **[Obsidian](https://obsidian.md/)** — the skill writes quizzes, flashcards, and concept notes into a vault on disk.
+- **[Obsidian Spaced Repetition plugin](https://github.com/st3v3nmw/obsidian-spaced-repetition)** — required to actually *review* the flashcards the skill generates (the cards use this plugin's default format).
+- **Python 3.8+** — for `setup.py`. No third-party dependencies.
+
 ## Install
 
 ```bash
@@ -70,7 +77,7 @@ cd learn-to-code-with-claude
 python3 setup.py
 ```
 
-The setup script copies the skill into `~/.claude/skills/` (so any Claude Code session, in any project, can invoke it) and walks you through the configuration interactively. It requires Python 3.8+ (no third-party dependencies).
+The setup script copies the skill into `~/.claude/skills/` (so any Claude Code session, in any project, can invoke it) and walks you through the configuration interactively.
 
 > Prefer to skip the script? Copy `.claude/skills/learn-to-code-with-claude/` to `~/.claude/skills/` manually. The first time you ask Claude to quiz you, it'll prompt for the same answers and write the config itself.
 
